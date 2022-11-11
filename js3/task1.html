@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class shape {
+            #name;
+            #side
+            #sideLength;
+
+            constructor(name, side, sideLength){
+                this.#name = name;
+                this.#side = side;
+                this.#sideLength = sideLength;
+            }
+            getName(){
+                return this.#name;
+            }
+            getSide(){
+                return this.#side;
+            }
+            getSideLength(){
+                return this.#sideLength;
+            }
+            
+            calcParameter(){
+                let perimeter = this.#side * this.#sideLength;
+                console.log("calculated parameter: ", perimeter);
+            }
+            
+        }
+
+        let square = new shape("Square", 4,5);
+        console.log("shape is", square.getName());
+        square.calcParameter();
+
+        let triangle = new shape("triangle", 3,3);
+        console.log("shape is", triangle.getName());
+        triangle.calcParameter();
+
+    </script>
+
+</body>
+
+</html>
